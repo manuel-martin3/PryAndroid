@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/btn_equal"
+            android:layout_width="50dp"
+            android:layout_height="58dp"
+            android:background="@color/colorBtnEq"
+            android:onClick="CalcularValores"
+            android:text="@string/btnEq"
+            android:textColor="@color/colorText"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/btn_c"
+            app:layout_constraintTop_toBottomOf="@+id/txt_resultaro" />
+
+        <TextView
+        android:id="@+id/txt_resultaro"
+        android:layout_width="0dp"
+        android:layout_height="380dp"
+            android:background="@color/colorPrimaryBacground"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/colorText"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_v1"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/txt_PrimerValor"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_resultaro" />
+
+    <EditText
+        android:id="@+id/txt_v2"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/txt_SegundoValor"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_v1"
+        app:layout_constraintTop_toBottomOf="@+id/txt_resultaro" />
+
+    <RadioGroup
+        android:id="@+id/rg_operaciones"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_v1">
+
+        <RadioButton
+            android:id="@+id/rb_sumar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="CalcularValores"
+            android:text="@string/rb1"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rb_restar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="CalcularValores"
+            android:text="@string/rb2"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rb_multiplicar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="CalcularValores"
+            android:text="@string/rb3"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rb_dividir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="CalcularValores"
+            android:text="@string/rb4"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_c"
+        android:layout_width="45dp"
+        android:layout_height="58dp"
+        android:background="@color/colorBtnC"
+        android:onClick="LimpiarParcial"
+        android:text="@string/btnC"
+        android:textColor="@color/colorText"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_v2"
+        app:layout_constraintTop_toBottomOf="@+id/txt_resultaro" />
+
+    <Button
+        android:id="@+id/btn_ce"
+        android:layout_width="96dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorBtnCE"
+        android:onClick="LimpiarTodo"
+        android:text="@string/btnCE"
+        android:textColor="@color/colorText"
+        app:layout_constraintStart_toEndOf="@+id/rg_operaciones"
+        app:layout_constraintTop_toBottomOf="@+id/btn_c" />
+
+
+    <TextView
+        android:id="@+id/txt_calculo"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:background="@color/colorPrimaryBacground"
+        android:gravity="right|center_vertical"
+        android:text="@string/txt_Calculo"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_resultaro" />
+
+    <TextView
+        android:id="@+id/txt_operacion"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+
+        android:background="@color/colorSecondBacground"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/txt_Calculo"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_resultaro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ibtn_calcularUp"
+        android:layout_width="66dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="Subir"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_operacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_operacion"
+        app:srcCompat="@drawable/whitearrowleft" />
+
+
+    <ImageView
+        android:id="@+id/ibtn_calcularDown"
+        android:layout_width="66dp"
+        android:layout_height="50dp"
+        android:onClick="Bajar"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_operacion"
+        app:layout_constraintEnd_toEndOf="@+id/txt_resultaro"
+        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintStart_toStartOf="@+id/txt_resultaro"
+        app:layout_constraintTop_toTopOf="@+id/txt_operacion"
+        app:srcCompat="@drawable/whitearrowright" />
+
+
+</android.support.constraint.ConstraintLayout>
+

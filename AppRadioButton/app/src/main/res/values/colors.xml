@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF5722</color>
+    <color name="colorPrimaryDark">#B34927</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBtnCalcular">#BB5434</color>
+    <color name="colorBtnCE">#6B686B</color>
+    <color name="colorBtnC">#9605A7</color>
+    <color name="colorBtnEq">#D80DF0</color>
+    <color name="colorText">#F7F5F4</color>
+    <color name="colorPrimaryBacground">#FF5722</color>
+    <color name="colorSecondBacground">#BB5434</color>
+    <color name="colorBGMensaje">#564C57</color>
+</resources>
