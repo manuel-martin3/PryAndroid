@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_c"
+        android:layout_width="39dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorClear"
+        android:onClick="LimpiarTodo"
+        android:text="C"
+        android:textColor="@color/colorText"
+        app:layout_constraintStart_toEndOf="@+id/btn_ce"
+        app:layout_constraintTop_toBottomOf="@+id/txt_num2" />
+
+    <Button
+        android:id="@+id/btn_ce"
+        android:layout_width="39dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorClearAll"
+        android:onClick="LimpiarResultado"
+        android:text="CE"
+        android:textColor="@color/colorText"
+        app:layout_constraintStart_toEndOf="@+id/btn_div"
+        app:layout_constraintTop_toBottomOf="@+id/txt_num2" />
+
+    <TextView
+        android:id="@+id/txt_valResult"
+        android:layout_width="360dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/colorText"
+        android:textSize="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ce" />
+
+    <Button
+        android:id="@+id/btn_div"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorDividir"
+        android:onClick="Division"
+        android:text="/"
+        android:textColor="@color/colorText"
+        app:layout_constraintStart_toEndOf="@+id/btn_mult"
+        app:layout_constraintTop_toBottomOf="@+id/txt_num2" />
+
+    <Button
+        android:id="@+id/btn_mult"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/colorMultiplicar"
+        android:onClick="Multiplicar"
+        android:text="x"
+        android:textColor="@color/colorText"
+        app:layout_constraintStart_toEndOf="@+id/btn_rest"
+        app:layout_constraintTop_toBottomOf="@+id/txt_num2" />
+
+    <Button
+        android:id="@+id/btn_rest"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorRestar"
+        android:onClick="Restar"
+        android:text="-"
+        android:textColor="@color/colorText"
+        app:layout_constraintStart_toEndOf="@+id/btn_sum"
+        app:layout_constraintTop_toBottomOf="@+id/txt_num2" />
+
+    <EditText
+        android:id="@+id/txt_num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Dame el primer valor"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Dame el segundo valor"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_num1" />
+
+    <Button
+        android:id="@+id/btn_sum"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:background="@color/colorSumar"
+        android:onClick="Sumar"
+        android:text="+"
+        android:textColor="@color/colorText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_num2" />
+
+    <TextView
+        android:id="@+id/txt_resultado"
+        android:layout_width="360dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="Mostrará el resultado de operación "
+        android:textColor="@color/colorMensaje"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_valResult"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</android.support.constraint.ConstraintLayout>

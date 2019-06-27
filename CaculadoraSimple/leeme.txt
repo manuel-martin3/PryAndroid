@@ -1,0 +1,25 @@
+
+Proyecto Calculadora en AndroidStudio 
+###########################################################
+
+***Instrucciones
+====================
+
+1. Descargar el Proyecto
+2. Abrirlo desde el IDE Android Studio
+
+
+
+***Consideraciones
+====================
+1. Realiza cálculos simples de las 4 opraciones básicas  
+
+****Fuente: 
+====================
+https://www.youtube.com/watch?v=v1zbFY4Kmtk
+
+
+PD. Algunos otros proyectos que puedan interesar:
+https://github.com/manuel-martin3?tab=repositories 
+
+¡¡¡ Que lo disfruten.....!!! 	
