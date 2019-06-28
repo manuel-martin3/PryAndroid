@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox chk1;
     private ImageButton btUp, btDown;
     private int id=0;
-    private String signo="";
+    private String signo="", calc="";
 
 
     @Override
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         rg= (RadioGroup)findViewById(R.id.rg_operaciones);
         et1.requestFocus();
         rb1.setChecked(true);
+        id=1;
 
         et1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -185,12 +186,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void LimpiarParcial(View view){
+        if (ValidarCampos(et1.getText().toString(), et2.getText().toString())) {
+            Calcular();
+        }
         Limpiar(false);
     }
 
     void Limpiar (Boolean todo){
 
-        tv2.setText(tv1.getText().toString());
+        //tv2.setText(tv1.getText().toString());
         et1.setText(tv1.getText().toString());
         tv1.setText("");
         et2.setText("");
@@ -200,6 +204,7 @@ public class MainActivity extends AppCompatActivity {
             et1.setText("");
             et1.requestFocus();
             tv2.setText("");
+            calc="";
         }
 
         /*
@@ -213,48 +218,79 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void CalcularValores(View view){
-        if (ValidarCampos(et1.getText().toString(), et2.getText().toString())){
-            Calcular();
+
+        if (chk1.isChecked()==false){
+            rb1.setEnabled(true);
+            rb2.setEnabled(true);
+            rb3.setEnabled(true);
+            rb4.setEnabled(true);
+            if (ValidarCampos(et1.getText().toString(), et2.getText().toString())){
+                Calcular();
+            }else {
+                mensaje();
+            }
+
         }else {
-            mensaje();
+            rb1.setEnabled(false);
+            rb2.setEnabled(false);
+            rb3.setEnabled(false);
+            rb4.setEnabled(false);
+            if (ValidarCampos(et1.getText().toString(), et2.getText().toString())){
+                Calcular();
+            }else {
+                mensaje();
+            }
         }
+        //tv2.setText(tv1.getText().toString());
+        //tv2.setText(tv2.getText().toString() +" "+ calc.toString());
 
     }
 
 
     public void Subir(View view){
+        if (chk1.isChecked()==false){
+            /*
+            if (ValidarCampos(et1.getText().toString(), et2.getText().toString())){
+                */
 
-        if (ValidarCampos(et1.getText().toString(), et2.getText().toString())){
-            int pos = ValidarPosicion();
-            if (pos>0 && pos<=4){
-                id = id-1;
-            }else{
-                id = 4;
-            }
+                int pos = ValidarPosicion();
+                if (pos>1){
+                    id = id-1;
+                }else{
+                    id = 4;
+                }
+                NuevaPosicion(id);
+                TipoOperacion();
+                et2.setText("");
+                //Calcular();
+                /*
+            }else {
 
-            NuevaPosicion(id);
-            Calcular();
-        }else {
-
-            mensaje();
+                mensaje();
+            }*/
         }
-
     }
 
     public void Bajar(View view){
-
-        if (ValidarCampos(et1.getText().toString(), et2.getText().toString())){
-            int pos = ValidarPosicion();
-            if (pos>0 && pos<=4){
-                id = id+1;
-            }else{
-                id = 1;
+        if (chk1.isChecked()==false){
+            /*
+            if (ValidarCampos(et1.getText().toString(), et2.getText().toString())){
+            */
+                int pos = ValidarPosicion();
+                if (pos>0 && pos<=3){
+                    id = id+1;
+                }else{
+                    id = 1;
+                }
+                NuevaPosicion(id);
+                TipoOperacion();
+                et2.setText("");
+          /*
+                Calcular();
+            }else {
+                mensaje();
             }
-
-            NuevaPosicion(id);
-            Calcular();
-        }else {
-            mensaje();
+        */
         }
     }
 

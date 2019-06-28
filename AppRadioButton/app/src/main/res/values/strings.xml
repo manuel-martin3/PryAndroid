@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BrainCalc</string>
+    <string name="app_name">Brain Calculator</string>
     <string name="txt_PrimerValor">1° Valor</string>
     <string name="txt_SegundoValor">2° Valor</string>
     <string name="rb1">Suma</string>
@@ -7,8 +7,8 @@
     <string name="rb3">Multiplicación</string>
     <string name="rb4">División</string>
     <string name="btn">Calc >></string>
-    <string name="btnC">C</string>
-    <string name="btnCE">CE</string>
+    <string name="btnC">Almacenar</string>
+    <string name="btnCE">Limpiar</string>
     <string name="btnEq">=</string>
     <string name="txt_Resultado">0</string>
     <string name="txt_Calculo">0</string>

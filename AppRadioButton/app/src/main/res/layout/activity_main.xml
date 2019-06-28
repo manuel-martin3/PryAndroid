@@ -8,26 +8,31 @@
         android:layout_height="match_parent">
 
 
-        <Button
-            android:id="@+id/btn_equal"
-            android:layout_width="140dp"
-            android:layout_height="40dp"
-            android:background="@color/colorBtnEq"
-            android:onClick="CalcularValores"
-            android:text="@string/btnEq"
-            android:textColor="@color/colorText"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_resultaro" />
+    <ImageView
+        android:id="@+id/btn_equal"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="CalcularValores"
+        android:text="@string/btnEq"
+        android:textColor="@color/colorText"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_v2"
+        app:layout_constraintTop_toBottomOf="@+id/txt_resultaro"
+        app:srcCompat="@drawable/equal" />
+
+
 
     <TextView
         android:id="@+id/txt_resultaro"
         android:layout_width="0dp"
-        android:layout_height="350dp"
+        android:layout_height="330dp"
         android:background="@color/colorPrimaryBacground"
         android:gravity="center_horizontal|center_vertical"
         android:textColor="@color/colorText"
-        android:textSize="35sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,12 +41,15 @@
     <EditText
         android:id="@+id/txt_v1"
         android:layout_width="135dp"
-        android:layout_height="40dp"
-        android:background="@color/colorBGVal"
-        android:textColor="@color/colorText"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/bordercolor"
         android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
         android:hint="@string/txt_PrimerValor"
         android:inputType="numberDecimal"
+        android:textColor="@color/colorTextIn"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_resultaro" />
@@ -49,12 +57,15 @@
     <EditText
         android:id="@+id/txt_v2"
         android:layout_width="135dp"
-        android:layout_height="40dp"
-        android:background="@color/colorBGVal"
-        android:textColor="@color/colorText"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/bordercolor"
         android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
         android:hint="@string/txt_SegundoValor"
         android:inputType="numberDecimal"
+        android:textColor="@color/colorTextIn"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/txt_v1"
         app:layout_constraintTop_toBottomOf="@+id/txt_resultaro" />
@@ -118,25 +129,25 @@
 
     <Button
         android:id="@+id/btn_c"
-        android:layout_width="96dp"
+        android:layout_width="110dp"
         android:layout_height="50dp"
         android:background="@color/colorBtnC"
         android:onClick="LimpiarParcial"
         android:text="@string/btnC"
         android:textColor="@color/colorText"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/txt_operacion"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn_ce"
-        android:layout_width="96dp"
+        android:layout_width="110dp"
         android:layout_height="50dp"
         android:background="@color/colorBtnCE"
         android:onClick="LimpiarTodo"
         android:text="@string/btnCE"
         android:textColor="@color/colorText"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/txt_operacion"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -149,7 +160,7 @@
         android:gravity="right|center_vertical"
         android:text="@string/txt_Calculo"
         android:textColor="@color/colorText"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -158,7 +169,7 @@
     <TextView
         android:id="@+id/txt_operacion"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
 
         android:background="@color/colorSecondBacground"
         android:gravity="center_horizontal|center_vertical"
@@ -173,7 +184,7 @@
     <ImageView
         android:id="@+id/ibtn_calcularUp"
         android:layout_width="66dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:onClick="Subir"
@@ -186,7 +197,7 @@
     <ImageView
         android:id="@+id/ibtn_calcularDown"
         android:layout_width="66dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:onClick="Bajar"
         app:layout_constraintBottom_toBottomOf="@+id/txt_operacion"
         app:layout_constraintEnd_toEndOf="@+id/txt_resultaro"
@@ -205,6 +216,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:buttonTint="@color/colorBChk"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/txt_operacion"
         app:layout_constraintEnd_toStartOf="@+id/btn_c"
         app:layout_constraintStart_toEndOf="@+id/btn_ce" />
