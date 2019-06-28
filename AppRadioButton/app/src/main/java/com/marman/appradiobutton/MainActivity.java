@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         rg= (RadioGroup)findViewById(R.id.rg_operaciones);
         et1.requestFocus();
-
+        rb1.setChecked(true);
 
         et1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -79,8 +79,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
+        TipoOperacion();
     }
 
 
@@ -95,24 +94,42 @@ public class MainActivity extends AppCompatActivity {
 
         if (rb1.isChecked()==true){
             resul = String.valueOf(n1 + n2);
-            tv3.setText(rb1.getText().toString());
+            //tv3.setText(rb1.getText().toString());
             signo = "+";
         }else if (rb2.isChecked()==true){
             resul = String.valueOf(n1 - n2);
-            tv3.setText(rb2.getText().toString());
+            //tv3.setText(rb2.getText().toString());
             signo = "-";
         }if (rb3.isChecked()==true){
             resul = String.valueOf(n1 * n2);
-            tv3.setText(rb3.getText().toString());
+            //tv3.setText(rb3.getText().toString());
             signo = "x";
         }else if (rb4.isChecked()==true){
             resul = String.valueOf(n1 / n2);
-            tv3.setText(rb4.getText().toString());
+            //tv3.setText(rb4.getText().toString());
             signo = "/";
         }
 
         tv2.setText(et1.getText() +" "+signo.toString()+" "+et2.getText().toString());
         tv1.setText(resul);
+        TipoOperacion();
+    }
+
+    void TipoOperacion(){
+
+        if (rb1.isChecked()==true){
+            tv3.setText(rb1.getText().toString());
+            signo = "+";
+        }else if (rb2.isChecked()==true){
+            tv3.setText(rb2.getText().toString());
+            signo = "-";
+        }if (rb3.isChecked()==true){
+            tv3.setText(rb3.getText().toString());
+            signo = "x";
+        }else if (rb4.isChecked()==true){
+            tv3.setText(rb4.getText().toString());
+            signo = "/";
+        }
     }
 
     public int ValidarPosicion() {
