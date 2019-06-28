@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv1, tv2, tv3;
     private RadioButton rb1,rb2, rb3, rb4;
     private RadioGroup rg;
+    private CheckBox chk1;
     private ImageButton btUp, btDown;
     private int id=0;
     private String signo="";
@@ -40,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         rb2= (RadioButton)findViewById(R.id.rb_restar);
         rb3= (RadioButton)findViewById(R.id.rb_multiplicar);
         rb4= (RadioButton)findViewById(R.id.rb_dividir);
+
+        chk1= (CheckBox)findViewById(R.id.chkOperacion);
 
         rg= (RadioGroup)findViewById(R.id.rg_operaciones);
         et1.requestFocus();
@@ -189,7 +193,6 @@ public class MainActivity extends AppCompatActivity {
         tv2.setText(tv1.getText().toString());
         et1.setText(tv1.getText().toString());
         tv1.setText("");
-        tv3.setText("");
         et2.setText("");
         et2.requestFocus();
 
@@ -199,6 +202,14 @@ public class MainActivity extends AppCompatActivity {
             tv2.setText("");
         }
 
+        /*
+        if (chk1.isChecked()==true){
+            ValidarPosicion();
+            rb1.setChecked(true);
+        }
+            TipoOperacion();
+            tv3.setText("");
+        */
     }
 
     public void CalcularValores(View view){

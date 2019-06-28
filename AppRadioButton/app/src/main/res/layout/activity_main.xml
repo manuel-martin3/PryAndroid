@@ -196,7 +196,7 @@
         app:srcCompat="@drawable/orangearrowright" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/chkOperacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
