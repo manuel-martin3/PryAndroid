@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Metodo boton ir
     public void Navegar(View view){
+
         Intent i = new Intent(this, ActivityWeb.class);
         i.putExtra("sitioweb", et1.getText().toString());
         startActivity(i);

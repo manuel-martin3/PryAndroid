@@ -18,6 +18,8 @@ public class ActivityWeb extends AppCompatActivity {
         wv=(WebView)findViewById(R.id.wv1);
         String url= getIntent().getStringExtra("sitioweb");
         wv.setWebViewClient(new WebViewClient());
+        wv.getSettings().setJavaScriptEnabled(true);
+
         wv.loadUrl("http://"+url);
     }
 
