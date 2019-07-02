@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Action Buttons App</string>
+    <string name="itemBuscar">Buscar</string>
+    <string name="itemCompartir">Compartir</string>
+    <string name="itemOpcion1">Opcion 1</string>
+    <string name="itemOpcion2">Opcion 2</string>
+</resources>
