@@ -131,13 +131,12 @@ public class Main2Activity_Nivel1 extends AppCompatActivity {
             }
 
         }else {
-            Intent intent = new Intent(this, Main2Activity_Nivel2.class);
 
             string_score = String.valueOf(score);
-
             string_vidas = String.valueOf(vidas);
 
-            intent.putExtra("nombre", nombre_juagador);
+            Intent intent = new Intent(this, Main2Activity_Nivel2.class);
+            intent.putExtra("jugador", nombre_juagador);
             intent.putExtra("score", string_score);
             intent.putExtra("vidas", string_vidas);
 
@@ -176,7 +175,7 @@ public class Main2Activity_Nivel1 extends AppCompatActivity {
         }else {
 
             ContentValues insertar = new ContentValues();
-            insertar.put("nombre", nombre_juagador);
+            insertar.put("jugador", nombre_juagador);
             insertar.put("score", score);
             BD.insert("puntaje", null, insertar);
             BD.close();
